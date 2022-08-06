@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo App</title>
+  <body>
+    <header>
+      <h1>ADD TODO LIST</h1>
+      <div>
+        <span></span>
+      </div>
+    </header>
+    <main>
+      <section>
+        <form id="form">
+          <input
+            id="inputTodo"
+            type="text"
+            name="inputTodo"
+            placeholder="Add Task..."
+            required
+          />
+          <button type="submit">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <button type="reset" id="cancelAddTodoItemButton">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </form>
+      </section>
+      <section id="todosList"></section>
+      <section id="popUpMessage">
+        <div id="message">
+          <span>
+            <i class="fa-solid fa-circle-check"></i>
+          </span>
+          <span>SUCCESS!</span>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script
+      src="https://kit.fontawesome.com/d5b49b62a2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/script.js"></script>
+  </body>
+</html>

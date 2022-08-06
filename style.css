@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --blue: #21d4fd;
+  --pink: #ae00ff;
+  --white: #ffffff;
+  --black: #333333;
+  --red: #ec2c2c;
+  --green: #3ec282;
+  --violet: #563ec1;
+  --purple: #9536f7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+h1,
+input {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 16px;
+  color: var(--white);
+  background: linear-gradient(320deg, var(--blue), var(--pink));
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+i {
+  color: var(--white);
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+input {
+  padding: 10px;
+}
+
+input::placeholder {
+  font-size: 16px;
+}
+
+button {
+  width: 43px;
+  cursor: pointer;
+}
+
+header,
+main {
+  max-width: 565px;
+  margin: 20px auto 34px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+header > div > span {
+  width: 70px;
+  display: block;
+  border-top: 2px solid var(--white);
+}
+
+main > section > form {
+  height: 43px;
+  display: flex;
+}
+
+main > section > form > #inputTodo {
+  flex-grow: 1;
+}
+
+main > section > form button:nth-child(2) {
+  background: var(--violet);
+}
+
+main > section > form button:nth-child(3) {
+  background: var(--red);
+}
+
+main > #todosList {
+  margin: 20px 0;
+}
+
+main > #todosList > .todo-item {
+  height: 43px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+main > #todosList > .todo-item > .todo-item-name {
+  height: 100%;
+  color: var(--black);
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+main > #todosList > .todo-item > .todo-item-name > span {
+  margin: 0 10px;
+}
+
+main > #todosList > .todo-item > .todo-item-action-buttons {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+main > #todosList > .todo-item > .todo-item-action-buttons button:first-child {
+  background: var(--green);
+}
+
+main > #todosList > .todo-item > .todo-item-action-buttons button:nth-child(2) {
+  background: var(--purple);
+}
+
+main > #todosList > .todo-item > .todo-item-action-buttons button:last-child {
+  background: var(--red);
+}
+
+main > #popUpMessage {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  left: 0;
+  bottom: 0;
+  display: none;
+}
+
+main > #popUpMessage > #message {
+  width: 30%;
+  height: 25%;
+  background: var(--white);
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  border-radius: 30px;
+}
+
+main > #popUpMessage > #message span {
+  color: var(--black);
+  display: block;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+main > #popUpMessage > #message > span i {
+  color: var(--green);
+  font-size: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  main > #popUpMessage > #message {
+    width: 90%;
+    height: 30%;
+  }
+}
